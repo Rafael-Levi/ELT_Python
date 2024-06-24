@@ -1,13 +1,11 @@
-[0m15:39:27.289831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F093110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F0E1C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F0E3F10>]}
+[0m13:03:19.500308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173B1CE80D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173B1C920D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173B1C93310>]}
 
 
-============================== 15:39:27.302849 | 6398c900-856a-4984-9540-072f76c6740f ==============================
-[0m15:39:27.302849 [info ] [MainThread]: Running with dbt=1.8.2
-[0m15:39:27.303818 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\rafaelponte\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
-[0m15:39:27.490828 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/rafaelponte/.dbt')}
-[0m15:39:27.492825 [info ] [MainThread]: Creating dbt configuration folder at 
-[0m15:40:15.888292 [debug] [MainThread]: Starter project path: C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\include\starter_project
-[0m15:40:16.058295 [info ] [MainThread]: 
+============================== 13:03:19.507333 | 9de55786-d6ab-4e07-8398-a4d6bb55530f ==============================
+[0m13:03:19.507333 [info ] [MainThread]: Running with dbt=1.8.2
+[0m13:03:19.508303 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '../', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:03:28.372608 [debug] [MainThread]: Starter project path: C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:03:28.414612 [info ] [MainThread]: 
 Your new dbt project "datawarehouse" was created!
 
 For more information on how to configure the profiles.yml file,
@@ -23,67 +21,8 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 
 Happy modeling!
 
-[0m15:40:16.060295 [info ] [MainThread]: Setting up your profile.
-[0m15:43:10.858714 [error] [MainThread]: Encountered an error:
-
-[0m15:43:10.862707 [error] [MainThread]: Traceback (most recent call last):
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
-    result, success = func(*args, **kwargs)
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
-    results = task.run()
-              ^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\task\init.py", line 347, in run
-    self.setup_profile(profile_name)
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
-    self.create_profile_from_target(adapter, profile_name=profile_name)
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
-    self.create_profile_from_profile_template(profile_template, profile_name)
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
-    target = self.generate_target_from_input(prompts, initial_target)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
-    target[key] = click.prompt(
-                  ^^^^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\click\termui.py", line 164, in prompt
-    value = prompt_func(prompt)
-            ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
-    raise Abort() from None
-click.exceptions.Abort
-
-[0m15:43:10.870709 [debug] [MainThread]: Command `dbt init` failed at 15:43:10.869710 after 223.68 seconds
-[0m15:43:10.871708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F092890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F090850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C18F0932D0>]}
-[0m15:43:10.872743 [debug] [MainThread]: Flushing usage events
-[0m15:43:16.029899 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
-[0m15:43:25.078691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CE4CEE050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CE4CE3F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CE4CEE3D0>]}
-
-
-============================== 15:43:25.084692 | 780b2f12-3d32-4676-90ff-d9d68910d0cf ==============================
-[0m15:43:25.084692 [info ] [MainThread]: Running with dbt=1.8.2
-[0m15:43:25.086693 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\rafaelponte\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
-[0m15:46:09.887450 [debug] [MainThread]: Starter project path: C:\Users\rafaelponte\Documents\Github\Python\ELT_Python\.venv\Lib\site-packages\dbt\include\starter_project
-[0m15:46:09.918469 [info ] [MainThread]: 
-Your new dbt project "datawarehouse" was created!
-
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
-
-  https://docs.getdbt.com/docs/configure-your-profile
-
-One more thing:
-
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
-
-  https://community.getdbt.com/
-
-Happy modeling!
-
-[0m15:46:09.929453 [info ] [MainThread]: Setting up your profile.
-[0m15:50:20.437534 [info ] [MainThread]: Profile datawarehouse written to C:\Users\rafaelponte\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m15:50:20.440533 [debug] [MainThread]: Command `dbt init` succeeded at 15:50:20.440533 after 415.48 seconds
-[0m15:50:20.442535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CD8F08090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CD8E83D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CD8E83150>]}
-[0m15:50:20.444536 [debug] [MainThread]: Flushing usage events
+[0m13:03:28.417623 [info ] [MainThread]: Setting up your profile.
+[0m13:04:19.066128 [info ] [MainThread]: Profile datawarehouse written to ..\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:04:19.070126 [debug] [MainThread]: Command `dbt init` succeeded at 13:04:19.070126 after 59.67 seconds
+[0m13:04:19.071129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173A5E836D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173A5EC6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173B1CE26D0>]}
+[0m13:04:19.072126 [debug] [MainThread]: Flushing usage events

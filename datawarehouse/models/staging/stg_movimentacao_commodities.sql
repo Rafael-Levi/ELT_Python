@@ -1,19 +1,21 @@
-with source(
-    SELECT
-        "date",
-        "symbol",
-        "action",
-        "quantity"
-    FROM{{source("dbsales_ff4q","movimentacao_commodities")}}
+with source as (
+    select
+        date,
+        symbol,
+        action,
+        quantity
+    from 
+        {{ source('dbsales_ff4q', 'movimentacao_commodities') }}
 ),
+
 renamed as (
-    SELECT
+    select
         cast(date as date) as data,
         symbol as simbolo,
         action as acao,
         quantity as quantidade
-    FROM source
+    from source
 )
 
-SELECT * from renamed
+select * from renamed
 

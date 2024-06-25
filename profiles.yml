@@ -1,4 +1,5 @@
 datawarehouse:
+  target: "dev"
   outputs:
     dev:
       dbname: "{{env_var('DB_NAME_PROD')}}"
@@ -9,4 +10,3 @@ datawarehouse:
       threads: "{{env_var('DB_THREDS_PROD') | int }}"
       type: postgres
       user: "{{env_var('DB_USER_PROD')}}"
-

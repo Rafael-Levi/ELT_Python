@@ -5,7 +5,8 @@ with source as (
         "Date",
         "Close",
         "simbolo"
-    FROM {{source('dbsales_ff4q','commodities')}}
+    from 
+        {{ source ('dbsales_ff4q', 'commodities') }}
 ),
 
 --renamed
